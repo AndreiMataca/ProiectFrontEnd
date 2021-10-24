@@ -17,22 +17,31 @@ body {
     user-select: none;
 }
 
-@media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-    }
-}
-
 .triangle {
     border-left: 0px solid transparent;
-    border-right: 750px solid transparent;
-    border-top: 1000px solid white;
+    border-right: 650px solid transparent;
+    border-top: 750px solid white;
     position: absolute;
     top: 0px;
     left: 0px;
     z-index: -1;
 }
-#meniuBar{
+
+#meniuBar {
     align-items: start;
     justify-content: flex-start;
+}
+
+#pageInfo {
+    margin-left: 20px;
+}
+
+.card {
+    width: 430px;
+    border: 0px;
+    background-color: rgba(255, 99, 71, 0);
+}
+
+.card-header {
+    background-color: rgba(255, 99, 71, 0);
 }
