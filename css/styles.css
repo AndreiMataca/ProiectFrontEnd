@@ -1,20 +1,9 @@
 body {
-    background-image: url('../img/Galett.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
+     width: 100%;
 }
 
 .user-success {
     display: none;
-}
-
-.bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
 }
 
 .triangle {
@@ -44,4 +33,21 @@ body {
 
 .card-header {
     background-color: rgba(255, 99, 71, 0);
+}
+
+.fullScreenImage{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100% !important;
+    width: 100% !important;
+    z-index: -2;
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
+    background-image: url('../img/Tarta.png');
+}
+
+.loginWidth{
+    width: 300px;
 }
