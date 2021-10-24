@@ -1,8 +1,12 @@
-body {
-     width: 100%;
+.user-success {
+    display: none;
 }
 
-.user-success {
+.login-success {
+    display: none;
+}
+
+.login-error {
     display: none;
 }
 
@@ -16,26 +20,7 @@ body {
     z-index: -1;
 }
 
-#meniuBar {
-    align-items: start;
-    justify-content: flex-start;
-}
-
-#pageInfo {
-    margin-left: 20px;
-}
-
-.card {
-    width: 430px;
-    border: 0px;
-    background-color: rgba(255, 99, 71, 0);
-}
-
-.card-header {
-    background-color: rgba(255, 99, 71, 0);
-}
-
-.fullScreenImage{
+.fullScreenImage {
     position: absolute;
     top: 0;
     left: 0;
@@ -46,8 +31,15 @@ body {
     background-position: center center;
     overflow: hidden;
     background-image: url('../img/Tarta.png');
+    /* to do  filter: blur(1px); */
 }
 
-.loginWidth{
+.loginWidth {
     width: 300px;
+}
+
+.dividerLine {
+    height: 2px;
+    width: 421px;
+    background-color: lightgrey;
 }

@@ -1,15 +1,28 @@
-function register(event){
-
-event.preventDefault();
-
-const nume = $('#name').val()
-const mail = $('#email').val()
-const parola = $('#password').val()
-
-user = new User(name,email,password)
-
 let httpApi = new HttpApi();
 
-httpApi.register();
+function register(event) {
 
+    const name = $('#name').val();
+    const email = $('#email').val();
+    const password = $('#password').val();
+
+    let user = new User(name, email, password);
+    httpApi.register(user);
+
+    event.preventDefault();
+}
+
+function login(event) {
+
+    const email = $('#email').val();
+    const password = $('#password').val();
+
+    let user = new User('', email, password);
+    httpApi.login(user);
+
+    event.preventDefault();
+}
+
+function showItems() {
+    httpApi.listItems();
 }
