@@ -26,3 +26,65 @@ function login(event) {
 function showItems() {
     httpApi.listItems();
 }
+/// part 2
+function createItem(event) {
+
+    const title = $('#title').val();
+    const description = $('#description').val();
+    const time = $('#time').val();
+
+    if (title === '' || description === '') {
+        Utils.showError('All the fields are required');
+    } else {
+        let item = new Item(title, description, time);
+
+        httpApi.create(item);
+    }
+
+    event.preventDefault();
+}
+
+function showItem() {
+    let urlParams = new URLSearchParams(window.location.search);
+    let id = urlParams.get('id');
+
+    httpApi.show(id);
+
+    // httpApi.getItem(id, function(response){
+    //     Utils.renderHtmlForItem(response);
+    // })
+}
+
+function editItem() {
+    let urlParams = new URLSearchParams(window.location.search);
+    let id = urlParams.get('id');
+
+    httpApi.editForm(id);
+}
+
+function updateItem(event) {
+
+    const title = $('#item-title').val();
+    const description = $('#item-description').val();
+    const id = $('.btn-update-item').attr('data-id');
+    const time = $('#item-time').val();
+
+    const item = new Item(title, description, time);
+
+    httpApi.update(item, id);
+
+    event.preventDefault();
+}
+
+function deleteItem() {
+    
+    $(document).on('click', '.delete-btn', function (event) {
+
+        console.log( $(event.currentTarget).attr('data-id') );
+        const id = event.currentTarget.getAttribute('data-id');
+
+        httpApi.delete(id, event.currentTarget);
+
+        event.preventDefault();
+    })
+}

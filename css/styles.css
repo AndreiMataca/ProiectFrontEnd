@@ -10,6 +10,10 @@
     display: none;
 }
 
+.error-container {
+    display: none
+}
+
 .triangle {
     border-left: 0px solid transparent;
     border-right: 650px solid transparent;
