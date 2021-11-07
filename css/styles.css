@@ -24,6 +24,16 @@
     z-index: -1;
 }
 
+.triangleShow {
+    border-left: 0px solid transparent;
+    border-right: 850px solid transparent;
+    border-top: 1200px solid white;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}
+
 .fullScreenImage {
     position: absolute;
     top: 0;
@@ -34,8 +44,12 @@
     background-size: cover;
     background-position: center center;
     overflow: hidden;
-    background-image: url('../img/Tarta.png');
+    /* background-image: url('../img/Tarta.png'); */
     /* to do  filter: blur(1px); */
+}
+
+.homeImg{
+    background-image: url('../img/Tarta.png');
 }
 
 .loginWidth {

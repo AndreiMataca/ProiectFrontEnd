@@ -12,7 +12,9 @@ class Utils {
       html = html + `<div class="col" data-id="${item.id}">
             <div class="card shadow-sm">
               <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect>
+              <title>Placeholder</title>
+              
+              <rect width="100%" height="100%" fill="#55595c"></rect>
               <text x="50%" y="50%" fill="#eceeef" dy=".3em">${item.title}</text></svg>
   
               <div class="card-body">
@@ -21,7 +23,7 @@ class Utils {
 
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" onclick="location.href='show.html?id=${item.id}'"class="btn btn-sm btn-outline-secondary">View</button>
                     <button type="button" onclick="location.href='edit.html?id=${item.id}'" class="btn btn-sm btn-outline-secondary">Edit</button>
                     <button type="button" onclick="deleteItem()" class="btn btn-sm btn-outline-danger delete-btn" data-id="${item.id}">Delete</button>
                   </div>
@@ -36,15 +38,15 @@ class Utils {
   }
 
   static renderHtmlForItem(item) {
-    let itemHtml = `<div class="card card-default">
-                          <div class="card-header">${item.title}</div>
-                          <div class="card-body">
-                              <!-- <img src="../img/${item.id}.jpg" class="img-fluid" alt="Responsive image"> -->
-                              <p class="card-text book-description">${item.description}</p>
-                          </div>
-                          </div>
-                          <a href="edit.html?id=${item.id}" class="btn btn-info btn-sm my-2 edit-link">Edit</a>`
+    let itemHtml = `<h3 class="m-4">${item.title}</h3>
+                    <div class="dividerLine ms-4"></div>
+                    <div class="w-25"> 
+                    <p class="m-4">${item.description}</p>
+                    <p class="m-4">Time: ${item.time} minutes</p>
+                    </div>`
     $('.item-container').html(itemHtml);
+    let itemImgHtml = `<img src="../img/${item.id}.png" class="fullScreenImage d-flex" alt="image for this recipe">`
+    $('.img-container').html(itemImgHtml);
   }
 
   static showEditForm(item) {
