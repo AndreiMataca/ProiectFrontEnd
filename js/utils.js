@@ -46,7 +46,7 @@ class Utils {
                     </div>`
     $('.item-container').html(itemHtml);
     let itemImgHtml = `<img src="../img/${item.id}.png" class="fullScreenImage d-flex" alt="image for this recipe">`
-    $('.img-container').html(itemImgHtml);
+    $('.fullScreenImage').css('background-image', `url(../img/${item.id}.png)`);
   }
 
   static showEditForm(item) {
@@ -61,6 +61,16 @@ class Utils {
     const $alertDanger = $('.alert-danger');
     $alertDanger.show();
     $alertDanger.html(message);
+  }
+
+  static localStorageSet(key, value) {
+    window.localStorage.setItem(key, value);
+  }
+  static localStorageGet(key) {
+    return window.localStorage.getItem(key);
+  }
+  static localStorageRemove(key) {
+    window.localStorage.removeItem(key);
   }
 
 }

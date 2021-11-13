@@ -32,7 +32,8 @@ class HttpApi {
             console.log(response);
             let userFromApi = response[0];
             if (user.password === userFromApi.password) {
-                Utils.redirect('list.html');
+                Utils.localStorageSet('loggedIn', 1);
+                Utils.redirect('recipes.html');
                 //set user as logged in
             } else {
                 Utils.showError('These credentials are wrong');

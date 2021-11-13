@@ -88,3 +88,22 @@ function deleteItem() {
         event.preventDefault();
     })
 }
+
+function commonJs() {
+
+    var loggedIn = Utils.localStorageGet('loggedIn');
+
+    if (parseInt(loggedIn) == 1) {
+        $('.item-login-register').hide();
+        $('.logout').show();
+    } else {
+        $('.item-login-register').show();
+        $('.logout').hide();
+    }
+
+    $('.logout').click(function (event) {
+        event.preventDefault();
+        Utils.localStorageRemove('loggedIn');
+        Utils.redirect('home.html')
+    })
+}

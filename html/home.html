@@ -14,11 +14,15 @@
 
 <body class="overflow-hidden">
     <div class="d-flex justify-content-between m-3 ">
-        <div class="px-4 "><a class="navbar-brand text-dark" href="home.html">Home</a> <a class="navbar-brand text-dark"
-                href="recipes.html">Recipes</a> <a class="navbar-brand text-dark" href="create.html">Create</a></div>
-        <div class="px-4 bg-white rounded-3 shadow"><a class="navbar-brand text-dark" href="login.html">Login</a> <a
-                class="navbar-brand text-dark" href="register.html">Register</a> <a class="navbar-brand text-dark"
-                href="#">Logout</a></div>
+        <div class="px-4 "><a class="navbar-brand text-dark" href="home.html">Home</a>
+            <a class="navbar-brand text-dark" href="recipes.html">Recipes</a>
+            <a class="navbar-brand text-dark" href="create.html">Create</a>
+        </div>
+        <div class="px-4 bg-white rounded-3 shadow">
+            <a class="navbar-brand text-dark item-login-register" href="login.html">Login</a>
+            <a class="navbar-brand text-dark item-login-register" href="register.html">Register</a>
+            <a class="navbar-brand text-dark logout" href="#">Logout</a>
+        </div>
     </div>
     <div class="d-flex flex-column m-3 pt-5">
         <h3 class="m-4">Mancarica</h3>
@@ -29,7 +33,7 @@
     <div class="triangle float-start"></div>
     <div class="w-50">
         <div class="fullScreenImage d-flex homeImg">
-            
+
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -37,7 +41,15 @@
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
         crossorigin="anonymous"></script>
 
+    <script src="../js/utils.js"></script>
+    <script src="../js/http-api.js"></script>
+    <script src="../js/index.js"></script>
 
+    <script>
+        $(document).ready(function () {
+            commonJs();
+        })
+    </script>
 
 
 </body>
