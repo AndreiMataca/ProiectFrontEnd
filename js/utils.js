@@ -11,21 +11,22 @@ class Utils {
 
       html = html + `<div class="col" data-id="${item.id}">
             <div class="card shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <title>Placeholder</title>
-              
-              <rect width="100%" height="100%" fill="#55595c"></rect>
-              <text x="50%" y="50%" fill="#eceeef" dy=".3em">${item.title}</text></svg>
+
+             
+
+              <img class="card-img-top shadow-sm" src="../img/lowRez/${item.id}.png" alt="Card image cap">
+
+              <p class="pt-1 ps-2 mb-0 fw-bold">${item.title}</p>
   
-              <div class="card-body">
+              <div class="card-body p-2">
                              
-                <textarea class="form-control" id="title" rows="3"> ${item.description} </textarea>
+                <textarea class="form-control p-2" id="title" rows="3"> ${item.description} </textarea>
 
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
                     <button type="button" onclick="location.href='show.html?id=${item.id}'"class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" onclick="location.href='edit.html?id=${item.id}'" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    <button type="button" onclick="deleteItem()" class="btn btn-sm btn-outline-danger delete-btn" data-id="${item.id}">Delete</button>
+                    <button type="button" onclick="location.href='edit.html?id=${item.id}'" class="btn btn-sm btn-outline-secondary hideBtn">Edit</button>
+                    <button type="button" onclick="deleteItem()" class="btn btn-sm btn-outline-danger delete-btn hideBtn" data-id="${item.id}">Delete</button>
                   </div>
                   <small class="text-muted"> ${item.time} mins</small>
                 </div>

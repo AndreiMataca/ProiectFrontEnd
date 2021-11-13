@@ -96,9 +96,13 @@ function commonJs() {
     if (parseInt(loggedIn) == 1) {
         $('.item-login-register').hide();
         $('.logout').show();
+        $('.create').show();
+        $('.hideBtn').show();
     } else {
         $('.item-login-register').show();
         $('.logout').hide();
+        $('.create').hide();
+        $('.hideBtn').hide();
     }
 
     $('.logout').click(function (event) {
