@@ -24,25 +24,23 @@
         <form class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
             onsubmit="updateItem(event)">
             <div class="col p-4 d-flex flex-column position-static">
-                <h1 class="h3 mb-3 fw-normal text-center">Update recipe</h1>
-                <div class="mb-3">
-                    <label for="text" class="form-label">Title</label>
-                    <input type="text" class="form-control" id="item-title">
+                <div class="d-flex justify-content-center">
+                    <h3 class="mb-3 fw-normal text-center bg-white rounded  shadow-sm p-2">Update recipe</h3>
                 </div>
-                <div class="mb-3">
-                    <label for="text" class="form-label">Description</label>
-                    <textarea class="form-control" id="item-description" rows="8"></textarea>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="item-title" placeholder="name@example.com">
+                    <label for="item-title">Title</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="item-description"
+                        style="height: 200px"></textarea>
+                    <label for="item-description">Description</label>
                 </div>
                 <input type="text" class="form-control form-control-sm w-25" id="item-time"
                     placeholder="Recipe duration">
             </div>
-            <div class="col-auto d-none d-lg-block m-4">
-                <svg class="bd-placeholder-img" width="400" height="400" xmlns="http://www.w3.org/2000/svg" role="img"
-                    aria-label="Placeholder: Thumbnail" focusable="false">
-                    <title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
-                        dy=".3em">Thumbnail</text>
-                </svg>
+            <div class="col-auto d-none d-lg-block m-4 item-image">
+                <!-- image -->
             </div>
             <div class="alert alert-danger error-container"></div>
             <button class="w-100 btn btn-lg btn-primary btn-update-item" data-id="" type="submit">Update recipe</button>

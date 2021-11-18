@@ -46,7 +46,6 @@ class Utils {
                     <p class="m-4">Time: ${item.time} minutes</p>
                     </div>`
     $('.item-container').html(itemHtml);
-    let itemImgHtml = `<img src="../img/${item.id}.png" class="fullScreenImage d-flex" alt="image for this recipe">`
     $('.fullScreenImage').css('background-image', `url(../img/${item.id}.png)`);
   }
 
@@ -54,6 +53,7 @@ class Utils {
     $('#item-title').val(item.title);
     $('#item-description').val(item.description);
     $('#item-time').val(item.time);
+    $('.item-image').html(`<img src="../img/lowRez/${item.id}.png" class="fullScreenImageEdit d-flex" alt="image for this recipe">`)
     $('.btn-update-item').attr('data-id', item.id);
   }
 

@@ -19,7 +19,7 @@ class HttpApi {
 
     login(user) {
         $.ajax({
-            url: `${this.USERS_API}?email=${user.email}`,     //https://615f1d01af36590017204852.mockapi.io/users?email=dragos@mail.com"
+            url: `${this.USERS_API}?email=${user.email}`,  
             type: 'GET',
             dataType: 'json'
         }).done(function (response) {
@@ -34,7 +34,6 @@ class HttpApi {
             if (user.password === userFromApi.password) {
                 Utils.localStorageSet('loggedIn', 1);
                 Utils.redirect('recipes.html');
-                //set user as logged in
             } else {
                 Utils.showError('These credentials are wrong');
             }
@@ -67,7 +66,7 @@ class HttpApi {
 
     show(id) {
         $.ajax({
-            url: this.ITEMS_API + '/' + id,   //https://615f1d01af36590017204852.mockapi.io/items/:id -> https://615f1d01af36590017204852.mockapi.io/items/10
+            url: this.ITEMS_API + '/' + id,   
             type: 'GET',
             dataType: 'json'
         }).done(function(response){
@@ -110,17 +109,6 @@ class HttpApi {
         }).done(function(response){
 
             $(`[data-id="${id}"]`).remove();
-
-            // target.parentElement.remove();
-
-            //    0       1      2
-            // [ 'li-1','li-2','li-3' ]
-
-            // $('.list-group-item-success').each(function(index, item){
-            //     if ( $(item).attr('data-id') === id ) {
-            //         $(item).remove();
-            //     }
-            // })
         })
     }
 
