@@ -69,7 +69,21 @@
 
 .dividerLine {
     height: 2px;
-    width: 415px;
+    width: 413px;
     background-color: lightgrey;
 }
 
+.dividerLineShow {
+    height: 2px;
+    width: 673px;
+    background-color: lightgrey;
+}
+
+/* .textarea {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    resize: both;
+    min-height: 40px;
+    line-height: 20px;
+  } */

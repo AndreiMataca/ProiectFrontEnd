@@ -40,14 +40,16 @@ class Utils {
 
   static renderHtmlForItem(item) {
     let itemHtml = `<h3 class="m-4">${item.title}</h3>
-                    <div class="dividerLine ms-4"></div>
+                    <div class="dividerLineShow ms-4"></div>
                     <div class="w-25"> 
                     <p class="m-4">${item.description}</p>
+                    
                     <p class="m-4">Time: ${item.time} minutes</p>
                     </div>`
     $('.item-container').html(itemHtml);
     $('.fullScreenImage').css('background-image', `url(../img/${item.id}.png)`);
   }
+
 
   static showEditForm(item) {
     $('#item-title').val(item.title);
@@ -75,3 +77,6 @@ class Utils {
   }
 
 }
+
+{/* <textarea class="form-control p-2 " rows="10"> ${item.description} </textarea>
+<p><strong>Solution with span:</strong> <span class="textarea" role="textbox" contenteditable>${item.description}</span></p> */}
