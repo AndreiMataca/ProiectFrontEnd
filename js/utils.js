@@ -76,6 +76,3 @@ class Utils {
   }
 
 }
-
-{/* <textarea class="form-control p-2 " rows="10"> ${item.description} </textarea>
-<p><strong>Solution with span:</strong> <span class="textarea" role="textbox" contenteditable>${item.description}</span></p> */}

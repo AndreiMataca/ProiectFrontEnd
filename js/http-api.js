@@ -96,7 +96,7 @@ class HttpApi {
             data: item
         }).done(function(response){
             if (response.id) {
-                Utils.redirect('home.html');
+                Utils.redirect('recipes.html');
             }
         })
     }
