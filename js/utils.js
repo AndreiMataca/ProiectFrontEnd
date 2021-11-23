@@ -24,11 +24,11 @@ class Utils {
 
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button type="button" onclick="location.href='show.html?id=${item.id}'"class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" onclick="location.href='edit.html?id=${item.id}'" class="btn btn-sm btn-outline-secondary hideBtn">Edit</button>
-                    <button type="button" onclick="deleteItem()" class="btn btn-sm btn-outline-danger delete-btn hideBtn" data-id="${item.id}">Delete</button>
+                    <button type="button" onclick="location.href='show.html?id=${item.id}'"class="btn btn-sm btn-outline-secondary">Vizualizare</button>
+                    <button type="button" onclick="location.href='edit.html?id=${item.id}'" class="btn btn-sm btn-outline-secondary hideBtn">Editare</button>
+                    <button type="button" onclick="deleteItem()" class="btn btn-sm btn-outline-danger delete-btn hideBtn" data-id="${item.id}">Ștergere</button>
                   </div>
-                  <small class="text-muted"> ${item.time} mins</small>
+                  <small class="text-muted"> ${item.time} min</small>
                 </div>
               </div>
             </div>
@@ -42,8 +42,7 @@ class Utils {
     let itemHtml = `<h3 class="m-4">${item.title}</h3>
                     <div class="dividerLineShow ms-4"></div>
                     <div class="w-25"> 
-                    <p class="m-4">${item.description}</p>
-                    
+                    <p class="m-4 whiteSpace">${item.description}</p>
                     <p class="m-4">Time: ${item.time} minutes</p>
                     </div>`
     $('.item-container').html(itemHtml);

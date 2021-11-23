@@ -97,11 +97,13 @@ function commonJs() {
         $('.item-login-register').hide();
         $('.logout').show();
         $('.create').show();
+        $('.recipe').show();
         $('.hideBtn').show();
     } else {
         $('.item-login-register').show();
         $('.logout').hide();
         $('.create').hide();
+        $('.recipe').hide();
         $('.hideBtn').hide();
     }
 
